@@ -6,7 +6,7 @@ import "./weather.css"
 function weather(props) {
     return(
         <div>
-            <img src={`http://openweathermap.org/img/w/${props.icon}.png`} alt="" className="icon"></img>
+            <img src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`} alt="" className="icon"></img>
             <h1>{props.name}</h1>
             <p>🌡️ - Temperature: {Math.round(props.temp)} °C</p>
             <p>💧 - Humidity: {Math.round(props.hum)}%</p>

@@ -3,6 +3,11 @@
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
+.DarkApp {
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #021252 0%, #26064d 100%);
+}
+
 .searchform {
     min-height: 10vh;
     display: flex;

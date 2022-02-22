@@ -3,7 +3,7 @@ import Weather from "./weather"
 import React, {useState,useEffect} from 'react';
 
 function App() {
-  const API_KEY = "[APIKEY]";
+  const API_KEY = "[YOUR API KEY]";
 
   const [weatherdata, setWeatherData] = useState([])
 
@@ -58,7 +58,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={weatherdata.weather?.[0].icon.includes("n") ? "DarkApp" : "App"}>
       <form onSubmit={updateQuery} className='searchform'>
         <input type="text" value={search} onChange={updateSearch} className='searchinput'></input>
         <button type='submit' className='searchbutton'>Search</button>
@@ -73,7 +73,7 @@ function App() {
       temp_max={weatherdata.main?.temp_max} 
       icon={weatherdata.weather?.[0].icon}
       />
-      <footer>Made with ❤️ by renaxdev</footer>
+      <footer>Made with ❤️ by renaxdev | API by openweathermap 🌞</footer>
     </div>
   );
 }

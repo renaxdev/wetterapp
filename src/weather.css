@@ -18,8 +18,13 @@ p{
 }
 
 .icon {
+    transition: transform .2s;
     display: block; 
     margin-left: auto;
     margin-right: auto;
     width: 10%;
+}
+
+.icon:hover {
+    transform: scale(1.10);
 }
